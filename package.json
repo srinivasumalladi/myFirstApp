@@ -2,7 +2,7 @@
   "name": "myapp",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://github.com/sriumalladi/newApp.git",
+  "homepage": "https://github.com/srinivasumalladi/myFirstApp.git",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
