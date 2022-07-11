@@ -1,0 +1,27 @@
+mkdir name
+touch name //to open
+code name // edit in code
+git status // To check status
+
+git init // Same folder initialise git
+git status // will display edited file in the list
+git add (index.html) or . // to add files in to local git
+git status // will display message not yet comitted
+git commit -m 'my first commit note' // to commit changes
+git log // will display 14 digit number commit code and note will display
+git log --oneline // will display commit code in 4 digits
+git remote // Check online git repository  (Create new repository and copy link)
+git remote add origin <HTTPS/GIT location>
+
+//
+git remote // will display git details : origin (alias name)
+git remote -v (full repositary name)
+
+//Create branch
+git branch -M main // Branch created main
+git remote push -u origin main // Push local files into git repositary main branch 
+git change git URL - git remote set-url origin new.git.url/here
+
+
+//react-flie-base64 for upload files in server
+//moment - time date management

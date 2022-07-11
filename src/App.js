@@ -1,11 +1,9 @@
-import logo from "./logo.svg";
-import "./App.css";
-import NewComponent from "./Components/NewComponent";
+import React from "react";
 
 function App() {
   return (
-    <div className="App">
-      <NewComponent />
+    <div>
+      <h1>App</h1>
     </div>
   );
 }
