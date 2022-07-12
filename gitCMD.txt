@@ -25,3 +25,7 @@ git change git URL - git remote set-url origin new.git.url/here
 
 //react-flie-base64 for upload files in server
 //moment - time date management
+
+
+//For cors error : add proxy:'localhost/5000' in package.json
+es6 suppot add 'type':'module' // in server node script
