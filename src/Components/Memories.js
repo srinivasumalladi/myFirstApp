@@ -1,18 +1,27 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { AppBar, Container, Grid, Grow, Typography } from "@mui/material";
 import memories from "../images/sample_01.png";
 import From from "./Form/From";
 import Posts from "./Posts/Posts";
 import "../main.css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getPosts } from "../actions/postActions";
 
 function Memories() {
   const dispatch = useDispatch();
-
+  const [currentID, setCurrentID] = useState(null);
+  const [postData, setPostData] = useState({
+    creator: "",
+    title: "",
+    message: "",
+    tags: "",
+    selectedFile: "",
+    likeCount: 0,
+  });
   useEffect(() => {
-    dispatch(getPosts);
-  }, [dispatch]);
+    dispatch(getPosts());
+    console.log("HI");
+  }, [dispatch, currentID]);
 
   return (
     <Container maxWidth="lg">
@@ -31,10 +40,15 @@ function Memories() {
             spacing={3}
           >
             <Grid item xs={12} sm={7}>
-              <Posts />
+              <Posts setCurrentID={setCurrentID} setPostData={setPostData} />
             </Grid>
             <Grid item xs={12} sm={4}>
-              <From />
+              <From
+                currentID={currentID}
+                setCurrentID={setCurrentID}
+                setPostData={setPostData}
+                postData={postData}
+              />
             </Grid>
           </Grid>
         </Container>

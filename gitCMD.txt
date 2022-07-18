@@ -1,4 +1,4 @@
-mkdir name
+gitsrgitgitmkdir name
 touch name //to open
 code name // edit in code
 git status // To check status
