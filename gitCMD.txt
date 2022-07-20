@@ -19,6 +19,7 @@ git remote -v (full repositary name)
 
 //Create branch
 git branch -M main // Branch created main
+git branch -a // get branch name
 git remote push -u origin main // Push local files into git repositary main branch 
 git change git URL - git remote set-url origin new.git.url/here
 

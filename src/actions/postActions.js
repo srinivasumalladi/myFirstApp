@@ -38,10 +38,11 @@ export const deletePost = (id) => async (dispatch) => {
   }
 };
 
+/* Same reducer is not working */
+
 export const likePosts = (id, post) => async (dispatch) => {
   try {
     const { data } = await api.likePost(id, post);
-    console.log(data);
     dispatch({ type: "UPDATE", payload: data });
   } catch (err) {
     console.log(err);

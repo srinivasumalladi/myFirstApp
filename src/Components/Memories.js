@@ -20,7 +20,6 @@ function Memories() {
   });
   useEffect(() => {
     dispatch(getPosts());
-    console.log("HI");
   }, [dispatch, currentID]);
 
   return (

@@ -13,20 +13,19 @@ import {
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { deletePost, getPosts, likePosts } from "../../../actions/postActions";
+import { deletePost, getPosts, updatePost } from "../../../actions/postActions";
 
 function Post({ post, setCurrentID }) {
   const dispatch = useDispatch();
-  const likes = useSelector((state) => state.posts.likeCount);
+  const likes = useSelector((state) => state.posts[0].likeCount);
 
   const setLikesCount = (id) => {
-    dispatch(likePosts(id, { ...post, likeCount: post.likeCount + 1 }));
-    console.log(likes);
+    dispatch(updatePost(id, { ...post, likeCount: post.likeCount + 1 }));
   };
 
   useEffect(() => {
     getPosts();
-  }, [post._id]);
+  }, [likes, setCurrentID]);
 
   return (
     <>
